@@ -29,4 +29,11 @@ public class Arnie{
     }
   }
 
+  public void addTerminator2Quotes(Terminator2 terminator2){
+    for(int i = 3; i < 6; i++){
+      String terminator2Quote = terminator2.outputQuote(i-3);
+      quotes[i] = terminator2Quote;
+    }
+  }
+
 }
