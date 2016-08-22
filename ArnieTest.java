@@ -16,15 +16,21 @@ public class ArnieTest {
 
   //ARNIE TESTS
 
+  // 1
+
   @Test
   public void hasName(){
     assertEquals("Arnold Schwarzenegger", arnie.getName());
   }
 
+  //2
+
   @Test
   public void hasNoQuotes(){
     assertEquals(0, arnie.quoteCount());
   }
+
+  //3
 
   @Test 
   public void hasPredatorQuotes(){
@@ -33,6 +39,8 @@ public class ArnieTest {
     assertEquals(3, arnie.quoteCount());
   }
 
+  //4
+
   @Test
   public void hasTerminator2Quotes(){
     terminator2.quotes();
@@ -40,13 +48,28 @@ public class ArnieTest {
     assertEquals(3, arnie.quoteCount());
   }
 
+  //5
+
+  @Test
+  public void hasAllQuotes(){
+    terminator2.quotes();
+    predator.quotes();
+    arnie.addTerminator2Quotes(terminator2);
+    arnie.addPredatorQuotes(predator);
+    assertEquals(6, arnie.quoteCount());
+  }
+
   // PREDATOR TESTS
+
+  //6
 
   @Test 
   public void predatorHasQuotes(){
     predator.quotes();
     assertEquals(3, predator.quoteCount());
   }
+
+  //7
 
   @Test
   public void predatorFirstQuote(){
@@ -56,11 +79,15 @@ public class ArnieTest {
 
   //TERMINATOR 2 TESTS
 
+  //8
+
   @Test
   public void terminator2Quotes(){
     terminator2.quotes();
     assertEquals(3, terminator2.quoteCount());
   }
+
+  //9
 
   @Test
   public void terminator2FirstQuote(){
