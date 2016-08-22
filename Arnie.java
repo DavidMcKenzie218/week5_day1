@@ -22,4 +22,11 @@ public class Arnie{
     return counter;
   }
 
+  public void addPredatorQuotes(Predator predator){
+    for(int i = 0; i < 3; i++){
+      String predatorQuote = predator.outputQuote(i);
+      quotes[i] = predatorQuote;
+    }
+  }
+
 }

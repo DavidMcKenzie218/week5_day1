@@ -14,5 +14,10 @@ class Predator{
         }
       }
       return counter;
-    }
   }
+
+  public String outputQuote(int quoteNumber){
+    return quotes[quoteNumber];
+  }
+
+}
